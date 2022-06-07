@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const PORT = 8000
+const cors = require('cors')
 
 const books = {
     'frankenstein': {
@@ -16,6 +17,8 @@ const books = {
         'genre':'unknown'
     }
 }
+
+app.use(cors)
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
