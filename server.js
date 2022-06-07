@@ -18,7 +18,7 @@ const books = {
     }
 }
 
-app.use(cors)
+app.use(cors())
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
